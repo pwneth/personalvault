@@ -4,7 +4,7 @@ class michaelNote {
 	public function fetch_all_direct() {
 		global $pdo;
 		
-		$query = $pdo->prepare("SELECT * FROM michael_notes ORDER BY note_id DESC");
+		$query = $pdo->prepare("SELECT * FROM [**database_name**] ORDER BY note_id DESC");
 		$query->execute();
 		
 		return $query->fetchAll();
@@ -96,7 +96,7 @@ if (isset($_POST['note_content']) && ($errors == false))
 	$note_user = $_COOKIE['user_name'];
 	$date = date("F j, Y, g:i a");
 	
-	$query = $pdo->prepare('INSERT INTO michael_notes (note_content, note_timestamp, note_user) VALUES (:note_content, :note_timestamp, :note_user)');
+	$query = $pdo->prepare('INSERT INTO [**database_name**] (note_content, note_timestamp, note_user) VALUES (:note_content, :note_timestamp, :note_user)');
 						
 	$query->execute(array(':note_content'=>$note_content,
 						  ':note_user'=>$note_user,
@@ -121,7 +121,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 if (isset($_POST['note_id'])) {
 	
-	$sql = "DELETE FROM michael_notes WHERE note_id =  :note_id";
+	$sql = "DELETE FROM [**database_name**] WHERE note_id =  :note_id";
 	$stmt = $pdo->prepare($sql);
 	$stmt->bindParam(':note_id', $_POST['note_id'], PDO::PARAM_INT);  
 	$stmt->execute();
