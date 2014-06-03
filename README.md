@@ -8,6 +8,6 @@
 
 4. Replace all values in index.php with the [\*\*example\*\*] syntax with relevant user login information and database name information. (it can be whatever you choose to login to your vault.)
 
-<h2>Visit http://michaelpnavarro.com/personalvault/ to give it a try. Use "username" as the username, and "password" as the password.</h2>
+<h4>Visit http://michaelpnavarro.com/personalvault/ to give it a try. Use "username" as the username, and "password" as the password.</h4>
 
 Feel free to download the code and use however you like!
